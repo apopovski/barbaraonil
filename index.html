@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Barbara O'Neill | Festival Novi Sad 2026</title>
+	<meta
+		name="description"
+		content="Barbara O'Neill speaking festival u Novom Sadu od 9. do 13. juna 2026. Talks, program, galerija i prijava."
+	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet" />
+	<style>
+		:root {
+			--bg: #0c1020;
+			--paper: #141a2e;
+			--paper-2: #1d2542;
+			--text: #eef2ff;
+			--muted: #bbc5ea;
+			--line: #303c66;
+			--acid: #d9ff3f;
+			--cyan: #48d7ff;
+			--pink: #ff5ec4;
+			--purple: #8573ff;
+			--radius: 18px;
+			--shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+			--display: "Bebas Neue", sans-serif;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+			font-family: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+			background:
+				radial-gradient(circle at 10% 10%, #202a54 0%, transparent 35%),
+				radial-gradient(circle at 88% 14%, #3f2453 0%, transparent 28%),
+				var(--bg);
+			color: var(--text);
+			scroll-behavior: smooth;
+		}
+
+		body {
+			line-height: 1.6;
+			overflow-x: hidden;
+			position: relative;
+		}
+
+		body::before,
+		body::after {
+			content: "";
+			position: fixed;
+			pointer-events: none;
+			z-index: 0;
+		}
+
+		body::before {
+			width: 42vw;
+			height: 42vw;
+			right: -12vw;
+			top: -10vw;
+			background: radial-gradient(circle, rgba(72, 215, 255, 0.2), transparent 68%);
+		}
+
+		body::after {
+			width: 40vw;
+			height: 40vw;
+			left: -12vw;
+			bottom: -16vw;
+			background: radial-gradient(circle, rgba(255, 94, 196, 0.16), transparent 70%);
+		}
+
+		.material-symbols-rounded {
+			font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 24;
+			font-size: 1.1rem;
+			line-height: 1;
+			vertical-align: middle;
+		}
+
+		.container {
+			width: min(1160px, calc(100% - 3rem));
+			margin: 0 auto;
+			position: relative;
+			z-index: 1;
+		}
+
+		.top-nav {
+			position: sticky;
+			top: 0;
+			z-index: 50;
+			background: rgba(12, 16, 32, 0.84);
+			backdrop-filter: blur(9px);
+			border-bottom: 1px solid var(--line);
+		}
+
+		.nav-inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 1rem;
+			padding: 0.86rem 0;
+		}
+
+		.brand {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			text-decoration: none;
+			font-size: 0.86rem;
+			font-weight: 900;
+			letter-spacing: 0.11em;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		.brand-dot {
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background: var(--acid);
+			box-shadow: 0 0 20px rgba(217, 255, 63, 0.85);
+		}
+
+		.nav-links {
+			display: flex;
+			gap: 0.4rem;
+			flex-wrap: wrap;
+		}
+
+		.nav-links a {
+			text-decoration: none;
+			padding: 0.42rem 0.66rem;
+			border-radius: 999px;
+			border: 1px solid transparent;
+			font-size: 0.74rem;
+			font-weight: 800;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #e7eeff;
+			transition: 0.2s ease;
+		}
+
+		.nav-links a:hover {
+			background: rgba(255, 255, 255, 0.08);
+			border-color: #4a5a8f;
+		}
+
+		.marquee {
+			border-bottom: 1px solid var(--line);
+			border-top: 1px solid var(--line);
+			background: #121935;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.marquee-track {
+			display: inline-block;
+			padding: 0.56rem 0;
+			font-size: 0.78rem;
+			font-weight: 900;
+			letter-spacing: 0.14em;
+			text-transform: uppercase;
+			color: var(--acid);
+			animation: ticker 28s linear infinite;
+		}
+
+		@keyframes ticker {
+			0% { transform: translateX(0); }
+			100% { transform: translateX(-50%); }
+		}
+
+		.hero {
+			padding: 2rem 0 3.5rem;
+			border-bottom: 1px solid var(--line);
+			position: relative;
+		}
+
+		.hero::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background: linear-gradient(90deg, transparent, rgba(217, 255, 63, 0.7), transparent);
+		}
+
+		.hero-grid {
+			display: grid;
+			grid-template-columns: 1.12fr 0.88fr;
+			gap: 1rem;
+		}
+
+		.panel {
+			background: linear-gradient(160deg, #141a2f, #111a33 65%);
+			border: 1px solid var(--line);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+		}
+
+		.hero-copy {
+			padding: 1.8rem;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.hero-copy::before {
+			content: "";
+			position: absolute;
+			width: 180px;
+			height: 180px;
+			right: -60px;
+			top: -60px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(72, 215, 255, 0.35), transparent 70%);
+		}
+
+		.kicker {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.35rem;
+			padding: 0.42rem 0.66rem;
+			border-radius: 999px;
+			font-size: 0.72rem;
+			font-weight: 800;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #0f1429;
+			background: var(--acid);
+			margin-bottom: 1rem;
+		}
+
+		h1 {
+			font-family: var(--display);
+			font-size: clamp(2.3rem, 7vw, 6.5rem);
+			line-height: 0.84;
+			letter-spacing: 0.01em;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			text-shadow: 0 10px 35px rgba(0, 0, 0, 0.48);
+		}
+
+		.hero-desc {
+			color: var(--muted);
+			max-width: 64ch;
+			margin-bottom: 1.15rem;
+		}
+
+		.meta-chips {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.52rem;
+			margin-bottom: 1.2rem;
+		}
+
+		.chip {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.35rem;
+			padding: 0.46rem 0.64rem;
+			border-radius: 999px;
+			border: 1px solid #45558a;
+			background: rgba(255, 255, 255, 0.04);
+			font-size: 0.78rem;
+			font-weight: 700;
+			color: #d9e5ff;
+		}
+
+		.cta-row {
+			display: flex;
+			gap: 0.56rem;
+			flex-wrap: wrap;
+		}
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.3rem;
+			text-decoration: none;
+			font-size: 0.76rem;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			padding: 0.82rem 0.95rem;
+			border-radius: 11px;
+			border: 1px solid transparent;
+			cursor: pointer;
+			transition: 0.2s ease;
+		}
+
+		.btn-primary {
+			background: var(--acid);
+			color: #0e1427;
+		}
+
+		.btn-primary:hover {
+			filter: brightness(1.03);
+			transform: translateY(-2px);
+			box-shadow: 0 12px 24px rgba(217, 255, 63, 0.28);
+		}
+
+		.btn-ghost {
+			background: rgba(255, 255, 255, 0.08);
+			border-color: #47588f;
+			color: #f1f4ff;
+		}
+
+		.btn-ghost:hover {
+			background: rgba(255, 255, 255, 0.14);
+			transform: translateY(-2px);
+		}
+
+		.hero-side {
+			display: grid;
+			grid-template-rows: 1fr auto;
+			gap: 1rem;
+		}
+
+		.poster {
+			position: relative;
+			min-height: 430px;
+			border-radius: var(--radius);
+			overflow: hidden;
+			border: 1px solid var(--line);
+			box-shadow: var(--shadow);
+		}
+
+		.poster::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(7,10,20,0.72) 100%),
+				url("images/barbara-o'neill-1.png") center/cover no-repeat;
+			transform: scale(1.06) translateY(var(--parallax-y, 0px));
+			will-change: transform;
+		}
+
+		.poster-label {
+			position: absolute;
+			left: 1rem;
+			bottom: 1rem;
+			padding: 0.5rem 0.7rem;
+			border-radius: 10px;
+			background: rgba(14, 20, 38, 0.8);
+			border: 1px solid #4b5d95;
+			font-size: 0.73rem;
+			font-weight: 800;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			backdrop-filter: blur(4px);
+		}
+
+		.stats {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.7rem;
+		}
+
+		.stat {
+			padding: 0.72rem 0.58rem;
+			border-radius: 12px;
+			background: #161f3b;
+			border: 1px solid #3f5083;
+			text-align: center;
+		}
+
+		.stat .v {
+			display: block;
+			font-size: 1.2rem;
+			font-weight: 900;
+		}
+
+		.stat .l {
+			font-size: 0.69rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #b7c4ea;
+		}
+
+		.section {
+			padding: 4.6rem 0;
+			border-bottom: 1px solid var(--line);
+		}
+
+		.sec-head {
+			display: grid;
+			grid-template-columns: 0.72fr 1.28fr;
+			gap: 1rem;
+			margin-bottom: 1.35rem;
+		}
+
+		.sec-kicker {
+			font-size: 0.72rem;
+			font-weight: 900;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--acid);
+		}
+
+		.sec-title {
+			font-family: var(--display);
+			font-size: clamp(1.55rem, 4vw, 3rem);
+			line-height: 0.95;
+			text-transform: uppercase;
+			letter-spacing: 0.02em;
+		}
+
+		.sec-sub {
+			color: var(--muted);
+			max-width: 74ch;
+		}
+
+		.grid-3 {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 0.8rem;
+		}
+
+		.card {
+			padding: 1rem;
+			border-radius: 14px;
+			border: 1px solid #3c4c7c;
+			background: #1a2241;
+			transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+		}
+
+		.card:hover {
+			transform: translateY(-4px);
+			border-color: #657dbd;
+			box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+		}
+
+		.card h3 {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.38rem;
+			font-size: 0.85rem;
+			font-weight: 900;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			margin-bottom: 0.45rem;
+		}
+
+		.card p {
+			color: var(--muted);
+			font-size: 0.93rem;
+		}
+
+		.break {
+			padding: 0.9rem 0;
+			background: linear-gradient(90deg, #121935, #0e1430);
+			border-bottom: 1px solid var(--line);
+		}
+
+		.break-frame {
+			position: relative;
+			height: clamp(220px, 30vw, 380px);
+			border-radius: var(--radius);
+			overflow: hidden;
+			border: 1px solid #3c4c7c;
+		}
+
+		.break-frame::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(120deg, rgba(0,0,0,0.1), rgba(0,0,0,0.36)),
+				url("images/barbara-o'neill-3.jpeg") center/cover no-repeat;
+			transform: scale(1.08) translateY(var(--parallax-y, 0px));
+			will-change: transform;
+		}
+
+		.break-note {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			padding: 0.48rem 0.68rem;
+			border-radius: 999px;
+			font-size: 0.7rem;
+			font-weight: 900;
+			letter-spacing: 0.11em;
+			text-transform: uppercase;
+			background: var(--acid);
+			color: #111728;
+		}
+
+		.about-layout {
+			display: grid;
+			grid-template-columns: 0.9fr 1.1fr;
+			gap: 0.9rem;
+		}
+
+		.about-image,
+		.about-text {
+			border-radius: var(--radius);
+			overflow: hidden;
+			border: 1px solid #3c4c7c;
+			background: #161f3b;
+		}
+
+		.about-image img {
+			width: 100%;
+			height: 100%;
+			min-height: 360px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.about-text {
+			padding: 1.25rem;
+		}
+
+		.about-text p {
+			color: var(--muted);
+		}
+
+		.about-text p + p {
+			margin-top: 0.75rem;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.75rem;
+		}
+
+		.gallery figure {
+			border: 1px solid #3c4c7c;
+			border-radius: 14px;
+			overflow: hidden;
+			background: #161f3b;
+			transition: transform 0.24s ease, border-color 0.24s ease;
+		}
+
+		.gallery figure:hover {
+			transform: translateY(-4px);
+			border-color: #6a80be;
+		}
+
+		.gallery img {
+			width: 100%;
+			height: 255px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.gallery figcaption {
+			padding: 0.6rem 0.65rem;
+			font-size: 0.7rem;
+			font-weight: 900;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: #d8e4ff;
+		}
+
+		.pricing {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 0.8rem;
+			margin-bottom: 1.1rem;
+		}
+
+		.price-card {
+			padding: 1rem;
+			border-radius: 14px;
+			border: 1px solid #3f4f82;
+			background: #1a2241;
+			transition: transform 0.24s ease, border-color 0.24s ease;
+		}
+
+		.price-card:hover {
+			transform: translateY(-4px);
+			border-color: #7089cb;
+		}
+
+		.price-card h3 {
+			font-size: 0.83rem;
+			font-weight: 900;
+			letter-spacing: 0.09em;
+			text-transform: uppercase;
+			margin-bottom: 0.45rem;
+		}
+
+		.price-card p {
+			color: var(--muted);
+			font-size: 0.88rem;
+		}
+
+		.price {
+			display: block;
+			margin-top: 0.7rem;
+			font-size: 1.55rem;
+			font-weight: 900;
+			letter-spacing: -0.02em;
+			color: var(--acid);
+		}
+
+		.info-card {
+			padding: 1.3rem;
+			border-radius: var(--radius);
+			background: linear-gradient(160deg, #161f3b, #111a33);
+			border: 1px solid #405184;
+		}
+
+		.contact-chips {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.55rem;
+			margin: 0.95rem 0 0.9rem;
+		}
+
+		.contact-chip {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.34rem;
+			padding: 0.46rem 0.64rem;
+			border-radius: 999px;
+			border: 1px solid #4a5d93;
+			background: rgba(255, 255, 255, 0.05);
+			font-size: 0.78rem;
+			font-weight: 700;
+		}
+
+		.signup-form {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 0.8rem;
+		}
+
+		.field {
+			display: flex;
+			flex-direction: column;
+			gap: 0.32rem;
+		}
+
+		.field label {
+			font-size: 0.72rem;
+			font-weight: 900;
+			text-transform: uppercase;
+			letter-spacing: 0.11em;
+			color: #d4e1ff;
+		}
+
+		.field input,
+		.field select,
+		.field textarea {
+			width: 100%;
+			background: rgba(255, 255, 255, 0.07);
+			border: 1px solid #4a5f94;
+			border-radius: 10px;
+			padding: 0.68rem 0.74rem;
+			font: inherit;
+			color: #f2f5ff;
+			outline: none;
+		}
+
+		.field input:focus,
+		.field select:focus,
+		.field textarea:focus {
+			border-color: #a3b4f3;
+			box-shadow: 0 0 0 4px rgba(72, 215, 255, 0.15);
+		}
+
+		.field textarea {
+			min-height: 110px;
+			resize: vertical;
+		}
+
+		.field-full,
+		.form-actions {
+			grid-column: 1 / -1;
+		}
+
+		.form-actions {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 0.7rem;
+			flex-wrap: wrap;
+		}
+
+		.form-note {
+			font-size: 0.78rem;
+			color: var(--muted);
+		}
+
+		#countdownStatus,
+		#formStatus {
+			margin-top: 0.6rem;
+			min-height: 1.2em;
+			font-size: 0.88rem;
+			font-weight: 700;
+			color: #8ff2c8;
+		}
+
+		.footer {
+			padding: 2rem 0 2.8rem;
+			font-size: 0.78rem;
+			font-weight: 900;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: #b8c4ea;
+			background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.02));
+		}
+
+		@media (max-width: 1024px) {
+			.hero-grid,
+			.sec-head,
+			.about-layout,
+			.pricing {
+				grid-template-columns: 1fr;
+			}
+
+			.grid-3,
+			.gallery,
+			.stats {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media (max-width: 740px) {
+			.container {
+				width: min(1160px, calc(100% - 2rem));
+			}
+
+			.top-nav .nav-inner {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.grid-3,
+			.gallery,
+			.signup-form,
+			.stats {
+				grid-template-columns: 1fr;
+			}
+
+			h1 {
+				font-size: clamp(2rem, 16vw, 4.3rem);
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav class="top-nav" aria-label="Glavna navigacija">
+		<div class="container nav-inner">
+			<a class="brand" href="#vrh"><span class="brand-dot" aria-hidden="true"></span>Barbara Festival Novi Sad</a>
+			<div class="nav-links">
+				<a href="#program">Program</a>
+				<a href="#barbara">Govornica</a>
+				<a href="#galerija">Galerija</a>
+				<a href="#prijava">Ulaznice</a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="marquee" aria-hidden="true">
+		<div class="marquee-track">
+			BARBARA O'NEILL • NOVI SAD • 9–13 JUN 2026 • TALKS • ART OF WELLNESS • Q&amp;A • FESTIVAL EDITION •
+			BARBARA O'NEILL • NOVI SAD • 9–13 JUN 2026 • TALKS • ART OF WELLNESS • Q&amp;A • FESTIVAL EDITION •
+		</div>
+	</div>
+
+	<header class="hero" id="vrh">
+		<div class="container hero-grid">
+			<section class="hero-copy panel">
+				<span class="kicker"><span class="material-symbols-rounded" aria-hidden="true">bolt</span>Festival 2026</span>
+				<h1>Barbara<br />O'Neill</h1>
+				<p class="hero-desc">
+					Od 9. do 13. juna 2026. Novi Sad postaje domaćin petodnevnog speaking festivala: predavanja, praktični
+					uvidi i intenzivna energija zajednice.
+				</p>
+				<div class="meta-chips">
+					<span class="chip"><span class="material-symbols-rounded" aria-hidden="true">calendar_month</span>9–13. jun 2026.</span>
+					<span class="chip"><span class="material-symbols-rounded" aria-hidden="true">schedule</span>Početak 9. jun u 18:00</span>
+					<span class="chip"><span class="material-symbols-rounded" aria-hidden="true">location_on</span>Novi Sad, Srbija</span>
+				</div>
+				<div class="cta-row">
+					<a class="btn btn-primary" href="#prijava"><span class="material-symbols-rounded" aria-hidden="true">confirmation_number</span>Rezerviši mesto</a>
+					<a class="btn btn-ghost" href="#program"><span class="material-symbols-rounded" aria-hidden="true">event_note</span>Full program</a>
+				</div>
+			</section>
+
+			<aside class="hero-side">
+				<div class="poster panel" data-parallax-speed="-0.1">
+					<span class="poster-label">14TH EDITION STYLE</span>
+				</div>
+				<div class="stats">
+					<div class="stat"><span class="v" id="days">00</span><span class="l">Dana</span></div>
+					<div class="stat"><span class="v" id="hours">00</span><span class="l">Sati</span></div>
+					<div class="stat"><span class="v"><span id="minutes">00</span>:<span id="seconds">00</span></span><span class="l">Min/Sek</span></div>
+				</div>
+			</aside>
+		</div>
+		<div class="container"><p id="countdownStatus"></p></div>
+	</header>
+
+	<main>
+		<section class="section" id="program">
+			<div class="container">
+				<div class="sec-head">
+					<p class="sec-kicker">Talks</p>
+					<div>
+						<h2 class="sec-title">Program koji menja ritam svakodnevice</h2>
+						<p class="sec-sub">KIKK-like modularni format: kratki, snažni blokovi sadržaja i jasan fokus na praktičnu primenu.</p>
+					</div>
+				</div>
+
+				<div class="grid-3">
+					<article class="card">
+						<h3><span class="material-symbols-rounded" aria-hidden="true">eco</span>Prirodni pristup zdravlju</h3>
+						<p>Ishrana, navike i dnevna rutina za održivu energiju i dugoročnu vitalnost.</p>
+					</article>
+					<article class="card">
+						<h3><span class="material-symbols-rounded" aria-hidden="true">neurology</span>Um i telo</h3>
+						<p>Povezanost stresa, emocionalne stabilnosti i fizičkog stanja kroz konkretne metode.</p>
+					</article>
+					<article class="card">
+						<h3><span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span>Plan za promenu</h3>
+						<p>Odlazite sa jasnim smernicama i koracima koji su primenljivi odmah nakon događaja.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="break" aria-label="Festival visual">
+			<div class="container">
+				<div class="break-frame" data-parallax-speed="-0.16">
+					<span class="break-note">Boom Boom Health</span>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="barbara">
+			<div class="container">
+				<div class="sec-head">
+					<p class="sec-kicker">Speaker</p>
+					<div>
+						<h2 class="sec-title">Barbara O'Neill uživo u Novom Sadu</h2>
+						<p class="sec-sub">Predavanja koja kombinuju jasnoću, toplinu i praksu, sa fokusom na realne rezultate.</p>
+					</div>
+				</div>
+
+				<div class="about-layout">
+					<div class="about-image">
+						<img src="images/barbara-o'neill-2.jpeg" alt="Barbara O'Neill na sceni" />
+					</div>
+					<div class="about-text">
+						<p>
+							Barbara O'Neill je međunarodno poznata predavačica koja inspiriše publiku kroz teme prirodnog zdravlja,
+							balansa i dugoročnog kvaliteta života.
+						</p>
+						<p>
+							Tokom festivala u Novom Sadu, sadržaj je organizovan kao niz fokusiranih segmenata koji omogućavaju
+							maksimalnu jasnoću i praktičnu vrednost.
+						</p>
+						<p>
+							Cilj je da svaki učesnik ode sa upotrebljivim planom i konkretnim sledećim koracima.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="galerija">
+			<div class="container">
+				<div class="sec-head">
+					<p class="sec-kicker">Art Trail</p>
+					<div>
+						<h2 class="sec-title">Vizuelna atmosfera događaja</h2>
+						<p class="sec-sub">Energija scene, interakcija sa publikom i dinamičan ritam petodnevnog programa.</p>
+					</div>
+				</div>
+
+				<div class="gallery">
+					<figure>
+						<img src="images/barbara-o'neill-1.png" alt="Barbara O'Neill u fokusu" />
+						<figcaption>Opening Session</figcaption>
+					</figure>
+					<figure>
+						<img src="images/barbara-o'neill-2.jpeg" alt="Barbara O'Neill predavanje" />
+						<figcaption>Main Talk</figcaption>
+					</figure>
+					<figure>
+						<img src="images/barbara-o'neill-3.jpeg" alt="Publika i Barbara O'Neill" />
+						<figcaption>Audience Q&amp;A</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="prijava">
+			<div class="container">
+				<div class="sec-head">
+					<p class="sec-kicker">Tickets</p>
+					<div>
+						<h2 class="sec-title">Festival passes</h2>
+						<p class="sec-sub">Izaberite paket koji vam odgovara i osigurajte mesto na vreme.</p>
+					</div>
+				</div>
+
+				<div class="pricing">
+					<div class="price-card">
+						<h3>Conference Pass</h3>
+						<p>Pristup glavnim predavanjima i festivalskim sadržajima.</p>
+						<span class="price">€149</span>
+					</div>
+					<div class="price-card">
+						<h3>Full Pass</h3>
+						<p>Najkompletnije iskustvo sa dodatnim pogodnostima i networkingom.</p>
+						<span class="price">€249</span>
+					</div>
+					<div class="price-card">
+						<h3>Exhibition Pass</h3>
+						<p>Ulaz na izložbeni deo i posebne festivalske lokacije.</p>
+						<span class="price">€7.5</span>
+					</div>
+				</div>
+
+				<div class="info-card">
+					<div class="contact-chips">
+						<span class="contact-chip"><span class="material-symbols-rounded" aria-hidden="true">call</span>+381 60 123 4567</span>
+						<span class="contact-chip"><span class="material-symbols-rounded" aria-hidden="true">mail</span>prijave@barbaraunovomsadu.rs</span>
+						<span class="contact-chip"><span class="material-symbols-rounded" aria-hidden="true">location_on</span>Novi Sad, Srbija</span>
+					</div>
+
+					<form class="signup-form" id="signupForm" novalidate>
+						<div class="field">
+							<label for="ime">Ime i prezime</label>
+							<input id="ime" name="ime" type="text" placeholder="Unesite ime i prezime" required />
+						</div>
+						<div class="field">
+							<label for="email">Email</label>
+							<input id="email" name="email" type="email" placeholder="ime@email.com" required />
+						</div>
+						<div class="field">
+							<label for="telefon">Telefon</label>
+							<input id="telefon" name="telefon" type="tel" placeholder="+381 6X XXX XXXX" />
+						</div>
+						<div class="field">
+							<label for="paket">Paket</label>
+							<select id="paket" name="paket">
+								<option value="conference">Conference Pass</option>
+								<option value="full">Full Pass</option>
+								<option value="exhibition">Exhibition Pass</option>
+							</select>
+						</div>
+						<div class="field field-full">
+							<label for="poruka">Napomena</label>
+							<textarea id="poruka" name="poruka" placeholder="Dodatne informacije"></textarea>
+						</div>
+						<div class="form-actions">
+							<button class="btn btn-primary" type="submit"><span class="material-symbols-rounded" aria-hidden="true">send</span>Pošalji prijavu</button>
+							<p class="form-note">Demo forma bez backend slanja.</p>
+						</div>
+					</form>
+					<p id="formStatus" aria-live="polite"></p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">Barbara O'Neill Festival • Novi Sad • 9–13 jun 2026</div>
+	</footer>
+
+	<script>
+		(function () {
+			const targetDateUtc = Date.UTC(2026, 5, 9, 16, 0, 0);
+			const daysEl = document.getElementById("days");
+			const hoursEl = document.getElementById("hours");
+			const minutesEl = document.getElementById("minutes");
+			const secondsEl = document.getElementById("seconds");
+			const statusEl = document.getElementById("countdownStatus");
+			const form = document.getElementById("signupForm");
+			const formStatus = document.getElementById("formStatus");
+			const parallaxElements = document.querySelectorAll("[data-parallax-speed]");
+			const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+			function twoDigits(value) {
+				return String(value).padStart(2, "0");
+			}
+
+			function updateCountdown() {
+				const now = Date.now();
+				const distance = targetDateUtc - now;
+
+				if (distance <= 0) {
+					daysEl.textContent = "00";
+					hoursEl.textContent = "00";
+					minutesEl.textContent = "00";
+					secondsEl.textContent = "00";
+					statusEl.textContent = "Događaj je počeo.";
+					return;
+				}
+
+				const totalSeconds = Math.floor(distance / 1000);
+				const days = Math.floor(totalSeconds / (24 * 60 * 60));
+				const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60));
+				const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+				const seconds = totalSeconds % 60;
+
+				daysEl.textContent = twoDigits(days);
+				hoursEl.textContent = twoDigits(hours);
+				minutesEl.textContent = twoDigits(minutes);
+				secondsEl.textContent = twoDigits(seconds);
+				statusEl.textContent = "Odbrojavanje je aktivno.";
+			}
+
+			function initParallax() {
+				if (reducedMotion || !parallaxElements.length) return;
+				let ticking = false;
+
+				function updateParallax() {
+					const scrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
+					parallaxElements.forEach((el) => {
+						const speed = Number(el.getAttribute("data-parallax-speed")) || 0;
+						el.style.setProperty("--parallax-y", `${scrollTop * speed}px`);
+					});
+					ticking = false;
+				}
+
+				window.addEventListener("scroll", () => {
+					if (!ticking) {
+						window.requestAnimationFrame(updateParallax);
+						ticking = true;
+					}
+				}, { passive: true });
+
+				updateParallax();
+			}
+
+			if (form) {
+				form.addEventListener("submit", function (event) {
+					event.preventDefault();
+					const fullName = document.getElementById("ime");
+					const email = document.getElementById("email");
+
+					if (!fullName.value.trim() || !email.value.trim()) {
+						formStatus.textContent = "Molimo unesite ime i ispravnu email adresu.";
+						formStatus.style.color = "#ffb7b7";
+						return;
+					}
+
+					formStatus.textContent = "Hvala. Vaša prijava je uspešno zabeležena.";
+					formStatus.style.color = "#8ff2c8";
+					form.reset();
+				});
+			}
+
+			updateCountdown();
+			setInterval(updateCountdown, 1000);
+			initParallax();
+		})();
+	</script>
+</body>
+</html>
